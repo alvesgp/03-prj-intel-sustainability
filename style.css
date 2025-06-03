@@ -1,0 +1,302 @@
+/* Import Montserrat and Roboto from Google Fonts */
+/* Add this at the very top of your CSS file */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+/* Set a clean, modern font and Intel blue background for the whole page */
+body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  background-color: #f4f8fb; /* Light blue-gray */
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+/* Center the info message at the bottom of the page */
+body > p {
+  text-align: center;    /* Center the text */
+  color: #0071c5;        /* Intel blue for consistency */
+  font-size: 1em;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+/* Header styles */
+header {
+  /* Add a blue gradient background for a more appealing look */
+  background: linear-gradient(90deg, #0a7dd4 0%, #0a67a1 100%);
+  color: #fff;
+  padding: 36px 0 26px 0;    /* More space above and below */
+  text-align: center;
+}
+
+/* Header logo */
+header img {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+/* Header main title */
+header h1 {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 2.5em;          /* Larger, more prominent title */
+  margin: 12px 0 14px 0;     /* More balanced spacing */
+  letter-spacing: 1.5px;     /* Slightly more spacing between letters */
+  font-weight: 700;
+}
+
+/* Header description */
+header p {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 1.2em;          /* Slightly larger for readability */
+  margin: 0 auto;
+  max-width: 540px;          /* Keep text from stretching too wide */
+  line-height: 1.6;          /* More space between lines for clarity */
+  color: #eaf6fd;            /* Softer white for less contrast */
+}
+
+/* Navigation bar styles for beginners */
+nav {
+  background-color: #005489; /* A darker Intel blue for the navbar */
+  padding: 10px 0;
+}
+
+/* Container for nav logo and links */
+.nav-container {
+  display: flex;                /* Use flexbox to arrange items in a row */
+  align-items: center;          /* Vertically center logo and links */
+  justify-content: space-between; /* Space between logo and links */
+  max-width: 900px;             /* Limit width for better appearance */
+  margin: 0 auto;               /* Center the nav bar on the page */
+  padding: 0 16px;              /* Add a little space on the sides */
+}
+
+/* Intel logo in the navbar */
+.nav-logo {
+  width: 60px;                  /* Set logo size */
+  height: auto;                 /* Keep logo's aspect ratio */
+  display: block;
+}
+
+/* Use flexbox to arrange links in a row */
+.navbar {
+  display: flex;                /* Arrange links in a row */
+  list-style: none;             /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  margin-left: 20px;            /* Space between links */
+}
+
+.navbar a {
+  text-decoration: none;        /* Remove underline */
+  color: #fff;                  /* White text for contrast */
+  font-weight: bold;
+  font-size: 1em;
+  transition: color 0.2s;
+}
+
+.navbar a:hover {
+  color: #ffd700;               /* Gold color on hover */
+}
+
+/* Timeline section styles */
+section {
+  /* Center the section and set width for exactly four cards and three gaps */
+  width: 940px;                /* 4 cards * 220px + 3 gaps * 20px = 940px */
+  max-width: 100vw;            /* Don't overflow the viewport */
+  margin: 30px auto;
+  padding: 0 10px;
+  display: flex;               /* Use flexbox to arrange cards in a row */
+  flex-wrap: nowrap;           /* Prevent cards from wrapping to next line */
+  gap: 20px;                   /* Space between cards */
+  justify-content: flex-start; /* Align cards to the left */
+  overflow-x: auto;            /* Enable horizontal scrolling if needed */
+  scroll-behavior: smooth;     /* Smooth scrolling for better experience */
+
+  /* Enable scroll snap for the timeline cards section */
+  scroll-snap-type: x mandatory;   /* Snap horizontally, required for children */
+}
+
+/* Make each card snap to the start when scrolling */
+.card {
+  scroll-snap-align: start;        /* Snap each card to the start of the section */
+
+  /* Card date styles (h2) */
+  h2 {
+    color: #0071c5;                /* Intel blue for the date */
+    font-size: 1.3em;              /* Slightly larger font */
+    font-family: 'Montserrat', 'Arial Black', Arial, sans-serif; /* Bold, modern font */
+    margin: 0 0 8px 0;             /* Space below the date */
+    letter-spacing: 1px;           /* Space out the numbers a bit */
+    text-align: center;            /* Center the date */
+  }
+
+  /* Card heading styles (h3) */
+  h3 {
+    color: #005489;                /* Darker Intel blue for the heading */
+    font-size: 1.1em;              /* Slightly larger than normal */
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif; /* Clean, modern font */
+    margin: 10px 0 0 0;            /* Space above the heading */
+    font-weight: bold;             /* Make heading bold */
+    text-align: center;            /* Center the heading */
+  }
+
+  /* Card styles for a more professional look */
+  background: #fff;
+  border: 1px solid #b5c9d6;     /* Softer border color */
+  border-radius: 12px;           /* Slightly more rounded corners */
+  margin-bottom: 25px;
+  padding: 18px 14px 18px 14px;  /* More balanced padding */
+  box-shadow: 0 4px 16px rgba(0,113,197,0.10); /* Softer, larger shadow */
+  transition: box-shadow 0.3s, transform 0.3s; /* Smooth transition for shadow and movement */
+  flex: 0 0 220px;
+  max-width: 220px;
+  min-width: 180px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible; /* Allow overlay to extend outside the card if needed */
+}
+.card:hover {
+  box-shadow: 0 12px 32px rgba(0,113,197,0.22); /* Stronger, larger shadow on hover */
+  transform: translateY(-8px) scale(1.04);      /* Lift and slightly scale the card */
+  z-index: 2; /* Bring hovered card above others */
+}
+
+/* Card images - fit neatly in the card */
+.card img {
+  width: 100%;                   /* Image fills the card width */
+  max-width: 170px;
+  height: 120px;
+  object-fit: cover;             /* Crop image to fit nicely */
+  border-radius: 8px;            /* Slightly more rounded corners */
+  border: 1px solid #e0eaf3;
+  margin-bottom: 12px;
+  background: #e8f0fa;           /* Subtle background for missing images */
+}
+
+/* Overlay for card hover effect */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 113, 197, 0.92);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s; /* Smooth fade and pop-in */
+  transform: scale(0.98); /* Slightly smaller by default */
+  border-radius: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 1em;
+  z-index: 10; /* Make sure overlay is above other elements */
+}
+
+/* Show the overlay when hovering over the card */
+.card:hover .card-overlay {
+  opacity: 1;
+  transform: scale(1); /* Pop overlay to full size on hover */
+}
+
+/* Optional: Add a little extra space above the card so overlay has room */
+section {
+  /* ...existing styles... */
+  padding-top: 24px; /* Add space above cards for overlay to show */
+}
+
+/* Responsive: On small screens, cards and images shrink and section is full width */
+@media (max-width: 1000px) {
+  section {
+    width: 100vw;
+    max-width: 100vw;
+  }
+  .card {
+    flex: 0 0 60vw;
+    max-width: 80vw;
+    min-width: 140px;
+  }
+  .card img {
+    max-width: 90%;
+    height: 90px;
+  }
+}
+
+/* Make headings and paragraphs adjust for smaller screens */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5em;        /* Smaller heading on small screens */
+    margin: 10px 0 12px 0;
+  }
+
+  header p {
+    font-size: 1em;          /* Slightly smaller paragraph text */
+    margin-bottom: 10px;
+    max-width: 95vw;
+  }
+}
+
+/* Make cards stack vertically and appear wider on small screens */
+@media (max-width: 700px) {
+  body {
+    text-align: center; /* Center all text and block elements */
+  }
+  header,
+  header h1,
+  header p {
+    text-align: center; /* Center header content */
+  }
+  section {
+    flex-direction: column;   /* Stack cards vertically */
+    width: 98vw;              /* Make section almost full width */
+    max-width: 100vw;
+    gap: 10px;                /* Space between cards */
+    padding: 0 2vw;           /* Small side padding */
+    align-items: center;      /* Center cards in the section */
+    display: flex;            /* Ensure flex is applied */
+  }
+  .card {
+    max-width: 95vw;          /* Card takes almost full width of section */
+    min-width: 0;             /* Remove min-width restriction */
+    width: 100%;              /* Card fills available width */
+    margin-left: auto;        /* Center card horizontally */
+    margin-right: auto;
+  }
+  .card img {
+    max-width: 100%;          /* Image fills card width */
+    height: auto;             /* Keep image aspect ratio */
+    display: block;
+    margin-left: auto;        /* Center image in card */
+    margin-right: auto;
+  }
+  body > p {
+    text-align: center;       /* Center the info message */
+  }
+}
+
+/* Responsive navigation bar for smaller screens */
+@media (max-width: 700px) {
+  .nav-container {
+    flex-direction: column;      /* Stack logo and links vertically */
+    align-items: flex-start;     /* Align logo and links to the left */
+  }
+  .navbar {
+    flex-direction: column;      /* Stack navigation links vertically */
+    align-items: flex-start;         /* Center links */
+    width: 100%;
+    margin-top: 10px;            /* Space between logo and links */
+  }
+  .navbar li {
+    margin: 10px 0 0 0;         /* Space between links, no left margin */
+  }
+}
