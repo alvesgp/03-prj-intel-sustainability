@@ -91,7 +91,7 @@ nav {
 }
 
 .navbar a {
-  text-decoration: none;        /* Remove underline */
+  text-decoration: none;        /* Remove underline */ 
   color: #fff;                  /* White text for contrast */
   font-weight: bold;
   font-size: 1em;
@@ -100,6 +100,20 @@ nav {
 
 .navbar a:hover {
   color: #ffd700;               /* Gold color on hover */
+}
+
+/* Style for Learn More links */
+.learn-more-link {
+  color: #0071c5;              /* Intel blue */
+  text-decoration: none;       /* No underline */
+  font-weight: bold;
+  border-bottom: 2px solid #0071c5; /* Underline effect */
+  transition: color 0.2s, border-color 0.2s;
+  padding-bottom: 2px;
+}
+.learn-more-link:hover {
+  color: #005489;              /* Darker blue on hover */
+  border-bottom: 2px solid #005489;
 }
 
 /* Timeline section styles */
@@ -147,9 +161,9 @@ section {
   /* Card styles for a more professional look */
   background: #fff;
   border: 1px solid #b5c9d6;     /* Softer border color */
-  border-radius: 12px;           /* Slightly more rounded corners */
+  border-radius: 0;           /* Remove rounded corners for sharp edges */
   margin-bottom: 25px;
-  padding: 18px 14px 18px 14px;  /* More balanced padding */
+  padding: 50px 14px 50px 14px;  /* More balanced padding */
   box-shadow: 0 4px 16px rgba(0,113,197,0.10); /* Softer, larger shadow */
   transition: box-shadow 0.3s, transform 0.3s; /* Smooth transition for shadow and movement */
   flex: 0 0 220px;
@@ -196,7 +210,7 @@ section {
   opacity: 0;
   transition: opacity 0.3s, transform 0.3s; /* Smooth fade and pop-in */
   transform: scale(0.98); /* Slightly smaller by default */
-  border-radius: 12px;
+  border-radius: 0;           /* Remove rounded corners for sharp overlay */
   padding: 20px;
   box-sizing: border-box;
   font-size: 1em;
@@ -212,7 +226,7 @@ section {
 /* Optional: Add a little extra space above the card so overlay has room */
 section {
   /* ...existing styles... */
-  padding-top: 24px; /* Add space above cards for overlay to show */
+  padding-top: 32px; /* Add space above cards for overlay to show */
 }
 
 /* Responsive: On small screens, cards and images shrink and section is full width */
@@ -300,3 +314,23 @@ section {
     margin: 10px 0 0 0;         /* Space between links, no left margin */
   }
 }
+
+/* Footer styles */
+.footer {
+  background-color: #005489; /* Dark Intel blue */
+  color: #e0f3ff;            /* Light text for contrast */
+  font-size: 0.95em;
+  border-top: 1px solid #b5c9d6;
+}
+
+.footer-link {
+  color: #e0f3ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-link:hover {
+  color: #ffd700; /* Gold hover effect for visibility */
+}
+
