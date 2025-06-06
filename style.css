@@ -229,72 +229,50 @@ section {
   padding-top: 32px; /* Add space above cards for overlay to show */
 }
 
-/* Responsive: On small screens, cards and images shrink and section is full width */
-@media (max-width: 1000px) {
-  section {
-    width: 100vw;
-    max-width: 100vw;
-  }
-  .card {
-    flex: 0 0 60vw;
-    max-width: 80vw;
-    min-width: 140px;
-  }
-  .card img {
-    max-width: 90%;
-    height: 90px;
-  }
-}
 
-/* Make headings and paragraphs adjust for smaller screens */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 1.5em;        /* Smaller heading on small screens */
-    margin: 10px 0 12px 0;
-  }
-
-  header p {
-    font-size: 1em;          /* Slightly smaller paragraph text */
-    margin-bottom: 10px;
-    max-width: 95vw;
-  }
-}
 
 /* Make cards stack vertically and appear wider on small screens */
-@media (max-width: 700px) {
+@media (max-width: 766px) {
   body {
-    text-align: center; /* Center all text and block elements */
+    text-align: center;
   }
+
   header,
   header h1,
   header p {
-    text-align: center; /* Center header content */
+    text-align: center;
   }
+
   section {
-    flex-direction: column;   /* Stack cards vertically */
-    width: 98vw;              /* Make section almost full width */
+    flex-direction: column;
+    width: 98vw;
     max-width: 100vw;
-    gap: 10px;                /* Space between cards */
-    padding: 0 2vw;           /* Small side padding */
-    align-items: center;      /* Center cards in the section */
-    display: flex;            /* Ensure flex is applied */
+    gap: 10px;
+    padding: 0 2vw;
+    align-items: center;
+    display: flex;
   }
+
   .card {
-    max-width: 95vw;          /* Card takes almost full width of section */
-    min-width: 0;             /* Remove min-width restriction */
-    width: 100%;              /* Card fills available width */
-    margin-left: auto;        /* Center card horizontally */
+    max-width: 95vw;
+    min-width: 0;
+    width: 100%;
+    margin-left: auto;
     margin-right: auto;
   }
+
+  /* ✅ New image styles added here */
   .card img {
-    max-width: 100%;          /* Image fills card width */
-    height: auto;             /* Keep image aspect ratio */
-    display: block;
-    margin-left: auto;        /* Center image in card */
-    margin-right: auto;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    object-fit: cover;
   }
+
   body > p {
-    text-align: center;       /* Center the info message */
+    text-align: center;
   }
 }
 
@@ -334,3 +312,23 @@ section {
   color: #ffd700; /* Gold hover effect for visibility */
 }
 
+/* Ensure equal height and align 'Learn More' at bottom */
+.info-column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.info-column p {
+  flex-grow: 1; /* Push the link down */
+}
+
+.card {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+.learn-more-link {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
